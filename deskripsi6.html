@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/Profil.css">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-primary navbar-dark ">
+    <div class="container">
+      <a class="navbar-brand" href="#">TEAM 9 PTIK A-22</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Profil.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Location.html">Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Rating.html">Rating</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Ulasan.html">Ulasan</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+  <section id="galeri" class="container mt-5">
+    <h2></h2>
+    <div class="row">
+      <div class="col-md-12">
+        <a href="Profil.html" class="btn btn-primary back-button">
+          <i class="fas fa-arrow-left"></i> Back
+        </a>
+      </div>
+    <div class="row">
+      <div class="col-md-15">
+        <center>
+          <img src="image/pulau_liukang.jpg" alt="Foto 6" class="img-fluid">
+          <h4>Pulau Liukang</h4>
+          <p>Pulau Liukang di Bulukumba adalah permata tersembunyi yang mengundang para petualang untuk merayakan pesona
+            laut yang menakjubkan. Dikelilingi oleh air laut yang jernih dan hamparan pasir putih yang mengundang, pulau
+            ini menawarkan tempat pelarian yang sempurna dari kehidupan sehari-hari. Untuk para penyelam, keindahan
+            bawah laut Pulau Liukang tak tertandingi, dengan terumbu karang warna-warni dan kehidupan laut yang beragam.
+            Bagi mereka yang mencari ketenangan, tepian pantai yang sunyi adalah tempat yang sempurna untuk bersantai
+            sambil merasakan angin laut yang menyegarkan. Jelajahi kehidupan pulau yang sederhana, temui keramahan
+            penduduk setempat, dan nikmati matahari terbenam yang memukau. Pulau Liukang Bulukumba, di mana petualangan
+            dan ketenangan saling berpadu, menciptakan pengalaman pulau yang magis dan tak terlupakan.</p>
+        </center>
+      </div>
+    </div>
+  </section>
+  </center>
+  <script>
+    function searchInPage(page) {
+      var searchQuery = document.getElementById("search-input").value;
+      var iframe = document.createElement("iframe");
+      iframe.style.display = "none";
+      iframe.src = page;
+
+      iframe.onload = function () {
+        var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+        var pageText = iframeDocument.body.innerText;
+
+        if (pageText.includes(searchQuery)) {
+          document.getElementById("searchResults").innerText = "Teks ditemukan di " + page;
+        } else {
+          document.getElementById("searchResults").innerText = "Teks tidak ditemukan di " + page;
+        }
+
+        iframe.remove();
+      };
+
+      document.body.appendChild(iframe);
+    }
+  </script>
+</body>
+
+</html>

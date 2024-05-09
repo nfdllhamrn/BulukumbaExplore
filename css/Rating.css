@@ -1,0 +1,168 @@
+.body {
+  animation: gradientBackground 5s ease infinite;
+  background: linear-gradient(45deg, #f1f2f4d6, #cdfad5);
+  background-size: 400% 400%;
+  margin: 0;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Warna teks dan padding untuk konten */
+.content {
+  color: #fff8c9;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #2e8bdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff;
+  margin: 0 15px;
+}
+
+.carousel-caption {
+  background: rgba(250, 249, 249, 0.5);
+  color: #1f1f1e;
+}
+
+/* Ukuran maksimum gambar dalam Carousel */
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.body {
+  font-family: Arial, sans-serif; /* Ganti dengan font yang Anda inginkan */
+}
+
+.custom-font {
+  font-family: "Courier New", monospace; /* Font khusus untuk elemen dengan class "custom-font" */
+}
+
+.navbar {
+  border-bottom: 2px solid transparent; /* Garis bawah awalnya transparan */
+}
+
+.navbar a:link,
+.navbar a:visited {
+  text-decoration: none; /* Hilangkan dekorasi tautan */
+}
+
+.navbar a:active,
+.navbar a:hover {
+  border-bottom: 2px solid #ffcf96; /* Warna dan lebar garis bawah saat aktif dan hover */
+}
+
+.navbar a:focus {
+  outline: #ffcf96; /* Hilangkan outline default saat fokus */
+}
+
+/* CSS untuk garis bawah pada navbar setelah diklik */
+.nav-link.active {
+  border-bottom: 2px solid #ffcf96;
+}
+
+.carousel {
+  max-width: 800px; /* Lebar maksimum carousel */
+  margin: 0 auto; /* Pusatkan carousel secara horizontal */
+}
+
+.carousel-inner img {
+  width: 600px; /* Atur lebar yang Anda inginkan */
+  height: 600px; /* Atur tinggi yang Anda inginkan */
+  object-fit: cover; /* Atur pemadatan objek gambar jika perlu */
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.destination-card {
+  margin-bottom: 20px;
+}
+
+/* Gaya untuk menu pencarian */
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+.search-input {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+/* Style for cards */
+.card {
+  margin-bottom: 20px;
+}
+
+/* Center align columns on extra small devices */
+@media (max-width: 576px) {
+  .col-md-4 {
+      text-align: center;
+  }
+}
+
+/* Adjust margin for columns on small devices */
+@media (max-width: 768px) {
+  .col-md-4 {
+      margin-bottom: 15x;
+  }
+}
+
+/* Increase margin on larger devices */
+@media (min-width: 992px) {
+  .col-md-4 {
+      margin-bottom: 30px;
+  }
+}
+
+/* Center align images inside cards */
+.card-img-top {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center align cards */
+.card {
+  text-align: center;
+}
+
+/* Center align the section content */
+#image {
+  text-align: center;
+}

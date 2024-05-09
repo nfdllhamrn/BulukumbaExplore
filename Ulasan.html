@@ -1,0 +1,376 @@
+<?php
+session_start();
+$user_name = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+?>
+
+<!DOCTYPE html>
+<style>
+    .ulasan-wrapper {
+    margin: 0 auto; /* Mengatur margin secara otomatis sehingga elemen berada di tengah */
+    text-align: center; /* Mengatur teks menjadi rata tengah */
+  }
+
+  /* Gaya untuk bagian Ulasan */
+  .rating-form {
+    background-color: #f0f0f0; /* Warna latar belakang */
+    border: 1px solid #ccc; /* Warna garis tepi */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Sudut bulat */
+  }
+
+  .rating-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .rating-form .btn {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .rating-form .submit {
+    background-color: #007bff; /* Warna biru untuk tombol submit */
+    color: #fff;
+  }
+
+  .rating-form .cancel {
+    background-color: #fff; /* Warna putih untuk tombol cancel */
+    color: #007bff; /* Warna biru untuk teks tombol cancel */
+    border: 1px solid #007bff; /* Warna biru untuk garis tepi tombol cancel */
+  }
+</style>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href= "ulasan.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark ">
+      <div class="container">
+        <a class="navbar-brand" href="#">TEAM 9 PTIK A-22</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Profil.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Location.html">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Rating</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Ulasan.html">Ulasan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+<!-- Ulasan -->
+<section id="image" class="container spasi mt-5">
+  <div class="row kartu">
+    <!-- ... Bagian card dan gambar tetap sama ... -->
+    <div class="col-lg-4 mb-4">
+      <div class="card">
+        <img
+          src="image/bira.jpg"
+          alt="Foto 1"
+          class="card-img-top"
+          height="200"
+        />
+        <div class="card-body" style="padding: 10px 12px; display: flex; flex-direction: column; align-items: center;">
+          <h5 class="card-title" style="margin: 10px">Pantai Bira</h5>
+          <div style="padding: 20px; width: 350px;">
+            <div class="wrapper ulasan-wrapper" style="padding: 32px; display: flex; flex-direction: column; align-items: center;">
+              <form action="#" id="ratingForm1" class="rating-form">
+                <h6>Yuk bagikan pengalamanmu!!</h6>
+                <textarea
+                  name="opinion"
+                  cols="30"
+                  rows="5"
+                  placeholder="Your opinion..."
+                  style="margin-bottom: 10px;"
+                ></textarea>
+                <div class="btn-group">
+                  <button type="submit" class="btn submit">Submit</button>
+                  <button type="button" class="btn cancel">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-4 mb-4">
+      <div class="card">
+        <img
+          src="image/apparalang.jpg"
+          alt="Foto 2"
+          class="card-img-top"
+          height="200"
+        />
+        <div class="card-body" style="padding: 10px 12px; display: flex; flex-direction: column; align-items: center;">
+          <h5 class="card-title" style="margin: 10px">Tebing Apparalang</h5>
+          <div style="padding: 20px; width: 350px;">
+            <div class="wrapper ulasan-wrapper" style="padding: 32px; display: flex; flex-direction: column; align-items: center;">
+              <form action="#" id="ratingForm2" class="rating-form">
+                <h6>Yuk bagikan pengalamanmu!!</h6>
+                <textarea
+                  name="opinion"
+                  cols="30"
+                  rows="5"
+                  placeholder="Your opinion..."
+                  style="margin-bottom: 10px;"
+                ></textarea>
+                <div class="btn-group">
+                  <button type="submit" class="btn submit">Submit</button>
+                  <button type="button" class="btn cancel">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-4 mb-4">
+      <div class="card">
+        <img
+          src="image/titiknol.jpeg"
+          alt="Foto 3"
+          class="card-img-top"
+          height="200"
+        />
+        <div class="card-body" style="padding: 10px 12px; display: flex; flex-direction: column; align-items: center;">
+          <h5 class="card-title" style="margin: 10px">Titik Nol</h5>
+          <div style="padding: 20px; width: 350px;">
+            <div class="wrapper ulasan-wrapper" style="padding: 32px; display: flex; flex-direction: column; align-items: center;">
+              <form action="#" id="ratingForm3" class="rating-form">
+                <h6>Yuk bagikan pengalamanmu!!</h6>
+                <textarea
+                  name="opinion"
+                  cols="30"
+                  rows="5"
+                  placeholder="Your opinion..."
+                  style="margin-bottom: 10px;"
+                ></textarea>
+                <div class="btn-group">
+                  <button type="submit" class="btn submit">Submit</button>
+                  <button type="button" class="btn cancel">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-4 mb-4">
+      <div class="card">
+        <img
+          src="image/lemolemo.jpeg"
+          alt="Foto 4"
+          class="card-img-top"
+          height="200"
+        />
+        <div class="card-body" style="padding: 10px 12px; display: flex; flex-direction: column; align-items: center;">
+          <h5 class="card-title" style="margin: 10px">Pantai Lemo-lemo</h5>
+          <div style="padding: 20px; width: 350px;">
+            <div class="wrapper ulasan-wrapper" style="padding: 32px; display: flex; flex-direction: column; align-items: center;">
+              <form action="#" id="ratingForm4" class="rating-form">
+                <h6>Yuk bagikan pengalamanmu!!</h6>
+                <textarea
+                  name="opinion"
+                  cols="30"
+                  rows="5"
+                  placeholder="Your opinion..."
+                  style="margin-bottom: 10px;"
+                ></textarea>
+                <div class="btn-group">
+                  <button type="submit" class="btn submit">Submit</button>
+                  <button type="button" class="btn cancel">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-4 mb-4">
+      <div class="card">
+        <img
+          src="image/marumasa.jpeg"
+          alt="Foto 5"
+          class="card-img-top"
+          height="200"
+        />
+        <div class="card-body" style="padding: 10px 12px; display: flex; flex-direction: column; align-items: center;">
+          <h5 class="card-title" style="margin: 10px">Pantai Marumasa</h5>
+          <div style="padding: 20px; width: 350px;">
+            <div class="wrapper ulasan-wrapper" style="padding: 32px; display: flex; flex-direction: column; align-items: center;">
+              <form action="#" id="ratingForm5" class="rating-form">
+                <h6>Yuk bagikan pengalamanmu!!</h6>
+                <textarea
+                  name="opinion"
+                  cols="30"
+                  rows="5"
+                  placeholder="Your opinion..."
+                  style="margin-bottom: 10px;"
+                ></textarea>
+                <div class="btn-group">
+                  <button type="submit" class="btn submit">Submit</button>
+                  <button type="button" class="btn cancel">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-lg-4 mb-4">
+      <div class="card">
+        <img
+          src="image/pulau_liukang.jpg"
+          alt="Foto 6"
+          class="card-img-top"
+          height="200"
+        />
+        <div class="card-body" style="padding: 10px 12px; display: flex; flex-direction: column; align-items: center;">
+          <h5 class="card-title" style="margin: 10px">Pulau Liukang</h5>
+          <div style="padding: 20px; width: 350px;">
+            <div class="wrapper ulasan-wrapper" style="padding: 32px; display: flex; flex-direction: column; align-items: center;">
+              <form action="#" id="ratingForm6" class="rating-form">
+                <h6>Yuk bagikan pengalamanmu!!</h6>
+                <textarea
+                  name="opinion"
+                  cols="30"
+                  rows="5"
+                  placeholder="Your opinion..."
+                  style="margin-bottom: 10px;"
+                ></textarea>
+                <div class="btn-group">
+                  <button type="submit" class="btn submit">Submit</button>
+                  <button type="button" class="btn cancel">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <center>
+    <div class="col-lg-4 mb-4" style="display: flex; justify-content: center;">
+      <div class="card">
+        <img
+          src="image/ammatoa.jpeg"
+          alt="Foto 7"
+          class="card-img-top"
+          height="200"
+        />
+        <div class="card-body" style="padding: 10px 12px; display: flex; flex-direction: column; align-items: center;">
+          <h5 class="card-title" style="margin: 10px">Kawasan Adat Kajang</h5>
+          <div style="padding: 20px; width: 350px;">
+            <div class="wrapper ulasan-wrapper" style="padding: 32px; display: flex; flex-direction: column; align-items: center;">
+              <form action="#" id="ratingForm7" class="rating-form">
+                <h6>Yuk bagikan pengalamanmu!!</h6>
+                <textarea
+                  name="opinion"
+                  cols="30"
+                  rows="5"
+                  placeholder="Your opinion..."
+                  style="margin-bottom: 10px;"
+                ></textarea>
+                <div class="btn-group">
+                  <button type="submit" class="btn submit">Submit</button>
+                  <button type="button" class="btn cancel">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </center>
+    
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".rating-form").submit(function(e){
+        e.preventDefault(); // Mencegah formulir mengirimkan permintaan langsung
+
+        // Mengambil data dari formulir
+        var place_name = $(this).closest('.card-body').find('.card-title').text();
+
+        // Menggunakan nilai user_name dari PHP yang telah didapatkan dari session
+        var user_name = "<?php echo $user_name; ?>";
+
+        var ulasan = $(this).find('textarea[name="opinion"]').val();
+
+        // Mengirim data ke server menggunakan AJAX
+        $.ajax({
+            type: "POST",
+            url: "ulasan_process.php", // Sesuaikan dengan nama skrip PHP Anda
+            data: {
+                place_name: place_name,
+                user_name: user_name,
+                ulasan: ulasan
+            },
+            success: function(response) {
+                alert(response); // Tampilkan pesan sukses atau tanggapan dari server
+            },
+            error: function(error) {
+                console.error(error); // Tampilkan pesan kesalahan pada konsol
+            }
+        });
+    });
+});
+</script>
+    <!-- Ulasan End -->
+  </body>
+</html>

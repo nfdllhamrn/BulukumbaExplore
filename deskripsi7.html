@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/Profil.css">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-primary navbar-dark ">
+    <div class="container">
+      <a class="navbar-brand" href="#">TEAM 9 PTIK A-22</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Profil.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Location.html">Location</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Rating.html">Rating</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Ulasan.html">Ulasan</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+  <section id="galeri" class="container mt-5">
+    <h2></h2>
+    <div class="row">
+      <div class="col-md-12">
+        <a href="Profil.html" class="btn btn-primary back-button">
+          <i class="fas fa-arrow-left"></i> Back
+        </a>
+      </div>
+    <div class="row">
+      <div class="col-md-15">
+        <center>
+          <img src="image/ammatoa.jpeg" alt="Foto 1" class="img-fluid">
+          <h4>Kawasan Adat Kajang</h4>
+          <p>Wisata Adat Kajang di Bulukumba adalah perjalanan magis ke dalam kearifan lokal dan keindahan tradisi yang
+            kaya. Kajang, yang merupakan pusat kehidupan masyarakat Konjo, membuka pintu bagi pengunjung untuk menyelami
+            warisan budaya yang megah. Jalan-jalan yang dihiasi dengan rumah-rumah adat tradisional khas Konjo
+            memberikan suasana klasik yang memikat, menciptakan keseimbangan antara masa lalu dan masa kini. Dalam
+            perjalanan ini, saksikan pertunjukan tari dan musik tradisional yang memesona, serta ikuti upacara adat yang
+            khas. Warisan kuliner tradisional Konjo juga dapat dinikmati, menggoda lidah dengan kelezatan unik yang
+            membedakan Kajang dari destinasi lainnya. Dengan setiap langkah, Wisata Adat Kajang mengajak pengunjung
+            untuk merasakan kehangatan budaya Konjo yang autentik, menciptakan pengalaman tak terlupakan yang meresapi
+            keindahan dan kedalaman tradisi.</p>
+        </center>
+      </div>
+    </div>
+  </section>
+  </center>
+  <script>
+    function searchInPage(page) {
+      var searchQuery = document.getElementById("search-input").value;
+      var iframe = document.createElement("iframe");
+      iframe.style.display = "none";
+      iframe.src = page;
+
+      iframe.onload = function () {
+        var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+        var pageText = iframeDocument.body.innerText;
+
+        if (pageText.includes(searchQuery)) {
+          document.getElementById("searchResults").innerText = "Teks ditemukan di " + page;
+        } else {
+          document.getElementById("searchResults").innerText = "Teks tidak ditemukan di " + page;
+        }
+
+        iframe.remove();
+      };
+
+      document.body.appendChild(iframe);
+    }
+  </script>
+</body>
+
+</html>

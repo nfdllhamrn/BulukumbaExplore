@@ -1,0 +1,211 @@
+     /* Animasi latar belakang */
+       /* Animasi latar belakang */
+       .body{
+        animation: gradientBackground 5s ease infinite;
+        background: linear-gradient(45deg, #f1f2f4d6, #CDFAD5);
+        background-size: 400% 400%;
+        margin: 0;
+    }
+    
+    @keyframes gradientBackground {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+    /* Warna teks dan padding untuk konten */
+    .content {
+        color: #FFF8C9;
+        padding: 20px;
+    }
+    
+    .navbar {
+        background-color: #2e8bdc;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+    
+    .navbar-brand {
+        color: #ffffff;
+    }
+    
+    .nav-link {
+        color: #ffffff;
+        margin: 0 15px;
+    }
+    
+    .carousel-caption {
+        background: rgba(250, 249, 249, 0.5);
+        color: #1f1f1e;
+    }
+    
+    /* Ukuran maksimum gambar dalam Carousel */
+    .carousel-item img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .body{
+        font-family: Arial, sans-serif; /* Ganti dengan font yang Anda inginkan */
+    }
+    
+    .custom-font {
+        font-family: "Courier New", monospace; /* Font khusus untuk elemen dengan class "custom-font" */
+    }
+    
+    .navbar {
+        border-bottom: 2px solid transparent; /* Garis bawah awalnya transparan */
+    }
+    
+    .navbar a:link,
+    .navbar a:visited {
+        text-decoration: none; /* Hilangkan dekorasi tautan */
+    }
+    
+    .navbar a:active,
+    .navbar a:hover {
+        border-bottom: 2px solid #FFCF96; /* Warna dan lebar garis bawah saat aktif dan hover */
+    }
+    
+    .navbar a:focus {
+        outline:#FFCF96 /* Hilangkan outline default saat fokus */
+    }
+    
+    /* CSS untuk garis bawah pada navbar setelah diklik */
+    .nav-link.active {
+        border-bottom: 2px solid #FFCF96;
+    }
+    
+    .carousel {
+        max-width: 800px; /* Lebar maksimum carousel */
+        margin: 0 auto; /* Pusatkan carousel secara horizontal */
+    }
+    
+    .carousel-inner img {
+        width: 600px; /* Atur lebar yang Anda inginkan */
+        height: 600px; /* Atur tinggi yang Anda inginkan */
+        object-fit: cover; /* Atur pemadatan objek gambar jika perlu */
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .destination-card {
+                margin-bottom: 20px;
+            }
+            
+            
+    
+            .search-button {
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 10px;
+                margin-left: 5px;
+                cursor: pointer;
+            }
+
+            .bannerVideo {
+              position: relative;
+              width: 100%;
+            }
+        
+            .bannerVideo video {
+              width: 100%;
+              height: auto;
+              display: block;
+            }
+        
+            .videoText {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+              color: white;
+            }
+        
+            .videoText h1 {
+              font-family: 'Times New Roman', Times, serif;
+              font-size: 2.5em;
+            }
+        
+            .videoText p {
+              font-family: sans-serif;
+              font-size: 1.5em;
+            }
+        
+            /* CSS Reset */
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+      
+            body {
+              font-family: Arial, sans-serif;
+              background-color: #f4f4f4;
+            }
+      
+            /* Styles for Developer Section */
+            .ket {
+              text-align: center;
+              margin-top: 20px;
+            }
+      
+            .container {
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              margin-top: 20px;
+            }
+      
+            .card {
+              background-color: #fff;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              margin: 10px;
+              overflow: hidden;
+              width: 300px;
+              max-width: 100%;
+            }
+      
+            .card__img {
+              width: 100%;
+              height: auto;
+              display: block;
+            }
+      
+            .card__data {
+              padding: 20px;
+            }
+      
+            .card__title {
+              font-size: 1.5em;
+              margin-bottom: 10px;
+            }
+      
+            .card__description {
+              color: #555;
+            }
+      
+            .card__button {
+              display: inline-block;
+              padding: 8px 16px;
+              background-color: #007bff;
+              color: #fff;
+              text-decoration: none;
+              border-radius: 4px;
+              margin-top: 10px;
+            }
+           

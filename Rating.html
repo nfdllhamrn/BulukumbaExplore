@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rating | Bulukumba Explore</title>
+    <link rel="stylesheet" href="css/Rating.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      .card {
+        text-align: center;
+      }
+
+      .rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      label {
+        color: #ddd;
+        font-size: 40px;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"]:checked ~ label {
+        color: #f39c12;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- First Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">TEAM 9 PTIK A-22</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Profil.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Location.html">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="login.php">Rating</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Ulasan.html">Ulasan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Section for Rating Cards -->
+    <section id="image" class="container mt-5">
+      <div class="row">
+        <!-- Kartu 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="image/bira.jpg"
+              alt="Foto 1"
+              class="card-img-top"
+              height="200"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center">Pantai Bira</h5>
+              <div class="rating">
+                <input
+                  type="checkbox"
+                  id="star1_bira"
+                  name="rating[]"
+                  value="1"
+                />
+                <label for="star1_bira" onclick="setRating(this, 'bira', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star2_bira"
+                  name="rating[]"
+                  value="2"
+                />
+                <label for="star2_bira" onclick="setRating(this, 'bira', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star3_bira"
+                  name="rating[]"
+                  value="3"
+                />
+                <label for="star3_bira" onclick="setRating(this, 'bira', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star4_bira"
+                  name="rating[]"
+                  value="4"
+                />
+                <label for="star4_bira" onclick="setRating(this, 'bira', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star5_bira"
+                  name="rating[]"
+                  value="5"
+                />
+                <label for="star5_bira" onclick="setRating(this, 'bira', event)"
+                  >&#9733;</label
+                >
+              </div>
+              <br />
+              <form
+                id="ratingForm_bira"
+                action="rating_process.php"
+                method="post"
+              >
+                <input type="hidden" name="place_name" value="Pantai Bira" />
+                <input type="hidden" name="user_name" value="" />
+                <input
+                  type="hidden"
+                  id="rating_input_bira"
+                  name="rating"
+                  value=""
+                />
+                <button type="submit" class="btn btn-primary read-more">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- ... Kartu-kartu lainnya ... -->
+        <!-- Kartu 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="image/apparalang.jpg"
+              alt="Foto 1"
+              class="card-img-top"
+              height="200"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center">
+                Tebing Apparalang
+              </h5>
+              <div class="rating">
+                <input
+                  type="checkbox"
+                  id="star1_apparalang"
+                  name="rating[]"
+                  value="1"
+                />
+                <label
+                  for="star1_apparalang"
+                  onclick="setRating(this, 'apparalang', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star2_apparalang"
+                  name="rating[]"
+                  value="2"
+                />
+                <label
+                  for="star2_apparalang"
+                  onclick="setRating(this, 'apparalang', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star3_apparalang"
+                  name="rating[]"
+                  value="3"
+                />
+                <label
+                  for="star3_apparalang"
+                  onclick="setRating(this, 'apparalang', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star4_apparalang"
+                  name="rating[]"
+                  value="4"
+                />
+                <label
+                  for="star4_apparalang"
+                  onclick="setRating(this, 'apparalang', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star5_apparalang"
+                  name="rating[]"
+                  value="5"
+                />
+                <label
+                  for="star5_apparalang"
+                  onclick="setRating(this, 'apparalang', event)"
+                  >&#9733;</label
+                >
+              </div>
+              <br />
+              <form
+                id="ratingForm_apparalang"
+                action="rating_process.php"
+                method="post"
+              >
+                <input
+                  type="hidden"
+                  name="place_name"
+                  value="Tebing Apparalang"
+                />
+                <input type="hidden" name="user_name" value="" />
+                <input
+                  type="hidden"
+                  id="rating_input_apparalang"
+                  name="rating"
+                  value=""
+                />
+                <button type="submit" class="btn btn-primary read-more">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- ... Kartu-kartu lainnya ... -->
+        <!-- Kartu 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="image/titiknol.jpeg"
+              alt="Foto 1"
+              class="card-img-top"
+              height="200"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center">Titik Nol</h5>
+              <div class="rating">
+                <input
+                  type="checkbox"
+                  id="star1_nol"
+                  name="rating[]"
+                  value="1"
+                />
+                <label for="star1_nol" onclick="setRating(this, 'nol', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star2_nol"
+                  name="rating[]"
+                  value="2"
+                />
+                <label for="star2_nol" onclick="setRating(this, 'nol', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star3_nol"
+                  name="rating[]"
+                  value="3"
+                />
+                <label for="star3_nol" onclick="setRating(this, 'nol', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star4_nol"
+                  name="rating[]"
+                  value="4"
+                />
+                <label for="star4_nol" onclick="setRating(this, 'nol', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star5_nol"
+                  name="rating[]"
+                  value="5"
+                />
+                <label for="star5_nol" onclick="setRating(this, 'nol', event)"
+                  >&#9733;</label
+                >
+              </div>
+              <br />
+              <form
+                id="ratingForm_nol"
+                action="rating_process.php"
+                method="post"
+              >
+                <input type="hidden" name="place_name" value="Titik Nol" />
+                <input type="hidden" name="user_name" value="" />
+                <input
+                  type="hidden"
+                  id="rating_input_nol"
+                  name="rating"
+                  value=""
+                />
+                <button type="submit" class="btn btn-primary read-more">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- ... Kartu-kartu lainnya ... -->
+        <!-- Kartu 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="image/lemolemo.jpeg"
+              alt="Foto 1"
+              class="card-img-top"
+              height="200"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center">
+                Pantai Lemo-lemo
+              </h5>
+              <div class="rating">
+                <input
+                  type="checkbox"
+                  id="star1_lemo"
+                  name="rating[]"
+                  value="1"
+                />
+                <label for="star1_lemo" onclick="setRating(this, 'lemo', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star2_lemo"
+                  name="rating[]"
+                  value="2"
+                />
+                <label for="star2_lemo" onclick="setRating(this, 'lemo', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star3_lemo"
+                  name="rating[]"
+                  value="3"
+                />
+                <label for="star3_lemo" onclick="setRating(this, 'lemo', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star4_lemo"
+                  name="rating[]"
+                  value="4"
+                />
+                <label for="star4_lemo" onclick="setRating(this, 'lemo', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star5_lemo"
+                  name="rating[]"
+                  value="5"
+                />
+                <label for="star5_lemo" onclick="setRating(this, 'lemo', event)"
+                  >&#9733;</label
+                >
+              </div>
+              <br />
+              <form
+                id="ratingForm_lemo"
+                action="rating_process.php"
+                method="post"
+              >
+                <input
+                  type="hidden"
+                  name="place_name"
+                  value="Pantai Lemp-lemo"
+                />
+                <input type="hidden" name="user_name" value="" />
+                <input
+                  type="hidden"
+                  id="rating_input_lemo"
+                  name="rating"
+                  value=""
+                />
+                <button type="submit" class="btn btn-primary read-more">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="image/marumasa.jpeg"
+              alt="Foto 1"
+              class="card-img-top"
+              height="200"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center">
+                Pantai Marumasa
+              </h5>
+              <div class="rating">
+                <input
+                  type="checkbox"
+                  id="star1_marumasa"
+                  name="rating[]"
+                  value="1"
+                />
+                <label
+                  for="star1_marumasa"
+                  onclick="setRating(this, 'marumasa', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star2_marumasa"
+                  name="rating[]"
+                  value="2"
+                />
+                <label
+                  for="star2_marumasa"
+                  onclick="setRating(this, 'marumasa', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star3_marumasa"
+                  name="rating[]"
+                  value="3"
+                />
+                <label
+                  for="star3_marumasa"
+                  onclick="setRating(this, 'marumasa', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star4_marumasa"
+                  name="rating[]"
+                  value="4"
+                />
+                <label
+                  for="star4_marumasa"
+                  onclick="setRating(this, 'marumasa', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star5_marumasa"
+                  name="rating[]"
+                  value="5"
+                />
+                <label
+                  for="star5_marumasa"
+                  onclick="setRating(this, 'marumasa', event)"
+                  >&#9733;</label
+                >
+              </div>
+              <br />
+              <form
+                id="ratingForm_marumasa"
+                action="rating_process.php"
+                method="post"
+              >
+                <input
+                  type="hidden"
+                  name="place_name"
+                  value="Pantai Marumasa"
+                />
+                <input type="hidden" name="user_name" value="" />
+                <input
+                  type="hidden"
+                  id="rating_input_marumasa"
+                  name="rating"
+                  value=""
+                />
+                <button type="submit" class="btn btn-primary read-more">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="image/pulau_liukang.jpg"
+              alt="Foto 1"
+              class="card-img-top"
+              height="200"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center">
+                Pulau Liukang
+              </h5>
+              <div class="rating">
+                <input
+                  type="checkbox"
+                  id="star1_liukang"
+                  name="rating[]"
+                  value="1"
+                />
+                <label
+                  for="star1_liukang"
+                  onclick="setRating(this, 'liukang', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star2_liukang"
+                  name="rating[]"
+                  value="2"
+                />
+                <label
+                  for="star2_liukang"
+                  onclick="setRating(this, 'liukang', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star3_liukang"
+                  name="rating[]"
+                  value="3"
+                />
+                <label
+                  for="star3_liukang"
+                  onclick="setRating(this, 'liukang', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star4_liukang"
+                  name="rating[]"
+                  value="4"
+                />
+                <label
+                  for="star4_liukang"
+                  onclick="setRating(this, 'liukang', event)"
+                  >&#9733;</label
+                >
+                <input
+                  type="checkbox"
+                  id="star5_liukang"
+                  name="rating[]"
+                  value="5"
+                />
+                <label
+                  for="star5_liukang"
+                  onclick="setRating(this, 'liukang', event)"
+                  >&#9733;</label
+                >
+              </div>
+              <br />
+              <form
+                id="ratingForm_liukang"
+                action="rating_process.php"
+                method="post"
+              >
+                <input type="hidden" name="place_name" value="Pulau Liukang" />
+                <input type="hidden" name="user_name" value="" />
+                <input
+                  type="hidden"
+                  id="rating_input_liukang"
+                  name="rating"
+                  value=""
+                />
+                <button type="submit" class="btn btn-primary read-more">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu 7 -->
+        <center>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img
+                src="image/ammatoa.jpeg"
+                alt="Foto 1"
+                class="card-img-top"
+                height="200"
+              />
+              <div class="card-body">
+                <h5 class="card-title" style="text-align: center">
+                  Kawasan Adat Kajang
+                </h5>
+                <div class="rating">
+                  <input
+                    type="checkbox"
+                    id="star1_kajang"
+                    name="rating[]"
+                    value="1"
+                  />
+                  <label
+                    for="star1_kajang"
+                    onclick="setRating(this, 'kajang', event)"
+                    >&#9733;</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="star2_kajang"
+                    name="rating[]"
+                    value="2"
+                  />
+                  <label
+                    for="star2_kajang"
+                    onclick="setRating(this, 'kajang', event)"
+                    >&#9733;</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="star3_kajang"
+                    name="rating[]"
+                    value="3"
+                  />
+                  <label
+                    for="star3_kajang"
+                    onclick="setRating(this, 'kajang', event)"
+                    >&#9733;</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="star4_kajang"
+                    name="rating[]"
+                    value="4"
+                  />
+                  <label
+                    for="star4_kajang"
+                    onclick="setRating(this, 'kajang', event)"
+                    >&#9733;</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="star5_kajang"
+                    name="rating[]"
+                    value="5"
+                  />
+                  <label
+                    for="star5_kajang"
+                    onclick="setRating(this, 'kajang', event)"
+                    >&#9733;</label
+                  >
+                </div>
+                <br />
+                <form
+                  id="ratingForm_kajang"
+                  action="rating_process.php"
+                  method="post"
+                >
+                  <input
+                    type="hidden"
+                    name="place_name"
+                    value="Kawasan Adat Kajang"
+                  />
+                  <input type="hidden" name="user_name" value="" />
+                  <input
+                    type="hidden"
+                    id="rating_input_kajang"
+                    name="rating"
+                    value=""
+                  />
+                  <button type="submit" class="btn btn-primary read-more">
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </center>
+      </div>
+    </section>
+
+    <script>
+      function setRating(element, placeName, event) {
+        let stars = element.parentNode.querySelectorAll(".rating > label");
+        let clickedStar = event.target;
+        let rating = clickedStar.previousElementSibling.value;
+
+        stars.forEach((star, index) => {
+          if (index < rating) {
+            star.style.color = "#f39c12";
+          } else {
+            star.style.color = "#ddd";
+          }
+        });
+
+        // Setel nilai dari input field tersembunyi
+        let ratingInput = document.getElementById("rating_input_" + placeName);
+        if (ratingInput) {
+          ratingInput.value = rating;
+        } else {
+          console.error(
+            "Element dengan ID 'rating_input_" +
+              placeName +
+              "' tidak ditemukan!"
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
